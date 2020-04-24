@@ -45,12 +45,12 @@ func main() {
 	b22 := 3.2
 	println(float64(a11) * b22)
 	log.Printf("------------------------------------------------------")
-	fi, err := os.Stat("/Users/pengtao/my-work/tmp/go/cmd/main.go")
-	if err != nil {
-		println("EEEEEEEEEEEEEEEE")
-		println(err)
-	}
-	fmt.Println("################", fi.Size())
+	// fi, err := os.Stat("/Users/pengtao/my-work/tmp/go/cmd/main.go")
+	// if err != nil {
+	// 	println("EEEEEEEEEEEEEEEE")
+	// 	println(err)
+	// }
+	// fmt.Println("################", fi.Size())
 	println("EEEEEEEEEEEEEEEE===========================")
 	a33 := "544"
 	a44, _ := strconv.ParseFloat(a33, 64)
@@ -99,7 +99,9 @@ func main() {
 	diffFmt()
 
 	println()
-	println()
+	pointerTest()
+	printtale()
+
 	println()
 }
 
@@ -110,7 +112,29 @@ func diffFmt() {
 	fmt.Printf("111111%s", testStr)     //test str
 	fmt.Println()
 	fmt.Sprintf("22222%s", testStr) //空，无IO输出
+
 	fmt.Println()
-	printStr := fmt.Sprintf("33333%s", testStr)
+	printStr := fmt.Sprintf("33333%", testStr)
 	fmt.Println(printStr) //test str
+}
+
+func printtale() {
+	for i := 0; i < 5; i++ {
+		fmt.Printf("%12s | %2d \n", "asdfeeee", 129+i)
+	}
+
+}
+
+func pointerTest() {
+
+	kkk := "asdfasdf"
+	ppp := &kkk
+	println("##########################################")
+	println(*ppp)
+
+	var strrr *string
+	str := "asdfasdfasd!!!!!!!!!!!!!!!!"
+	strrr = &str
+	println(*strrr)
+
 }
