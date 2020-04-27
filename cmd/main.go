@@ -9,6 +9,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"example.com/m/pkg/apis"
 )
 
 func createPointer() *int {
@@ -103,6 +105,9 @@ func main() {
 	printtale()
 
 	println()
+
+	apis.SayGreet()
+
 }
 
 func diffFmt() {
