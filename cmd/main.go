@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"example.com/m/pkg/apis"
+	"go-test-01/pkg/apis"
 )
 
 func createPointer() *int {
@@ -107,6 +107,7 @@ func main() {
 	println()
 
 	apis.SayGreet()
+	apis.SayHello()
 
 }
 
