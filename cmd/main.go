@@ -3,14 +3,14 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"go-test-01/pkg/apis"
+	"go-test-01/pkg/uti"
 	"log"
 	"os"
 	"reflect"
 	"strconv"
 	"strings"
 	"time"
-
-	"go-test-01/pkg/apis"
 )
 
 func createPointer() *int {
@@ -108,7 +108,34 @@ func main() {
 
 	apis.SayGreet()
 	apis.SayHello()
+	apis.StrArr()
 
+	apis.ReadFile("/Volumes/mac01/go/src/go-test-01/go.mod")
+
+	apis.Slic()
+
+	apis.Dyslic()
+
+	apis.SliOver()
+
+	apis.SliZero()
+
+	cmdArgs := os.Args[0:]
+
+	for _, value := range cmdArgs {
+		fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", value)
+	}
+
+	uti.DoFacke()
+
+	uti.TestMap()
+
+	uti.TestStru()
+
+	println(uti.StrConst)
+
+	kkkkk := fmt.Sprintf("$$$$$$$$$$$$$$$$$$$ %#v", uti.GetMet())
+	println("############################" + kkkkk)
 }
 
 func diffFmt() {
